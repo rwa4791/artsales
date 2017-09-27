@@ -1,7 +1,7 @@
 /* global moment firebase */
 // Initialize Firebase
  // Initialize Firebase
-  var config = {
+ var config = {
     apiKey: "AIzaSyChdJynwAdo_a7GDj9yJs8LcPmbb-aMflg",
     authDomain: "artsales-67ede.firebaseapp.com",
     databaseURL: "https://artsales-67ede.firebaseio.com",
@@ -49,6 +49,7 @@ connectionsRef.on("value", function(snap) {
 // Initial Values
 var initialBid = 0;
 var initialBidder = "No one :-(";
+var initialemail = "No one"
 var highPrice = initialBid;
 var highBidder = initialBidder;
 
