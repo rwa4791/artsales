@@ -1,13 +1,15 @@
 /* global moment firebase */
 // Initialize Firebase
+
  // Initialize Firebase
- var config = {
-    apiKey: "AIzaSyChdJynwAdo_a7GDj9yJs8LcPmbb-aMflg",
-    authDomain: "artsales-67ede.firebaseapp.com",
-    databaseURL: "https://artsales-67ede.firebaseio.com",
-    projectId: "artsales-67ede",
-    storageBucket: "artsales-67ede.appspot.com",
-    messagingSenderId: "3219538145"
+  var config = {
+  // Initialize Firebase
+    apiKey: "AIzaSyBACsDnviYXMEtvtiuIdIY2wxa8tSFhDkg",
+    authDomain: "auction-8a66a.firebaseapp.com",
+    databaseURL: "https://auction-8a66a.firebaseio.com",
+    projectId: "auction-8a66a",
+    storageBucket: "",
+    messagingSenderId: "1026250989764"
   };
   firebase.initializeApp(config);
 // Create a variable to reference the database.
