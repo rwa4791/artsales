@@ -35,6 +35,7 @@ var database = firebase.database();
        window.location.href = "signin.html";
       }  
      });  
+     
 
 // -----------------------------
 

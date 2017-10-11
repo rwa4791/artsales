@@ -16,14 +16,14 @@ var config = {
     storageBucket: "artsales-67ede.appspot.com",
     messagingSenderId: "3219538145"
   };
-  firebase.initializeApp(config);
+  firebase.initializeApp(config);  
  </script>  
  <!-- The code below initializes the sign-in widget from FirebaseUI web. -->  
-<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+ <script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>  
    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css" />  
    <script type="text/javascript">  
     var uiConfig = {  
-     signInSuccessUrl:'index.html',  
+     signInSuccessUrl: 'index.html',  
      signInOptions: [  
       // Specify providers you want to offer your users.  
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,  
