@@ -74,7 +74,6 @@ connectionsRef.on("value", function(snap) {
 // Initial Values
 var initialBid = 0;
 var initialBidder = "No one :-(";
-var initialemail = "No one"
 var highPrice = initialBid;
 var highBidder = initialBidder;
 
@@ -134,9 +133,11 @@ $("#submit-bid").on("click", function(event) {
     alert("You are now the highest bidder.");
 
     // Save the new price in Firebase
-    database.ref("/bidderData").set({
+    database.ref("/bidderData").push({
       highBidder: bidderName,
-      highPrice: bidderPrice
+      bidderName : bidderName,
+      highPrice: bidderPrice,
+      bidderPrice : bidderPrice
     });
 
     // Log the new High Price
