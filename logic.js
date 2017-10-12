@@ -14,7 +14,8 @@ var config = {
 // Create a variable to reference the database.
 var database = firebase.database();
 
-   // Track the UID of the current user.  
+// // // --------- Authentication code ------ // // //
+// Track the UID of the current user.  
      var currentUid = null;  
      firebase.auth().onAuthStateChanged(function(user) {  
       // onAuthStateChanged listener triggers every time the user ID token changes.  
@@ -34,6 +35,7 @@ var database = firebase.database();
        window.location.href = "signin.html";
       }  
      });  
+     
      
 
 // -----------------------------
