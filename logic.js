@@ -38,7 +38,7 @@ var database = firebase.database();
        window.location.href = "signin.html";
       }  
      });  
-     
+
 
 // connectionsRef references a specific location in our database.
 // All of our connections will be stored in this directory.
@@ -144,7 +144,7 @@ $("#submit-bid").on("click", function(event) {
     alert("You are now the highest bidder.");
 
     // Save the new price in Firebase
-    database.ref("/bidderData").set({
+    database.ref("/bidderData").push({
       highBidder: bidderName,
       highPrice: bidderPrice,
       highEmail:emailName
@@ -171,6 +171,23 @@ $("#submit-bid").on("click", function(event) {
     // Alert
     alert("Sorry that bid is too low. Try again.");
   }});
+
+database.ref("/bidderData").limitToLast(1).on("child_added", function(snapshot) {
+      // storing the snapshot.val() in a variable for convenience
+      var sv = snapshot.val();
+
+      console.log("------- SV -------");
+      console.log(sv.highPrice);
+
+      $("#highest-price").html("$" + sv.highPrice);
+      $("#highest-price").addClass("badge");
+      $("#highest-price").addClass("searchBadge");
+      $("#highest-price").addClass("badge-light");
+      
+    }, function(errorObject) {
+      console.log("Errors handled: " + errorObject.code);
+    });
+
 
 //Countdown Function
 // Set the date we're counting down to
@@ -202,3 +219,5 @@ var x = setInterval(function() {
     $("#submit-bid").hide();
   }
 }, 1000);
+
+
