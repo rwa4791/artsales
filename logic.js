@@ -18,7 +18,7 @@ var database = firebase.database();
 
 // -----------------------------
 // // // --------- Authentication code ------ // // //
-//Track the UID of the current user.  
+Track the UID of the current user.  
      var currentUid = null;  
      firebase.auth().onAuthStateChanged(function(user) {  
       // onAuthStateChanged listener triggers every time the user ID token changes.  
