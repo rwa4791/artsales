@@ -5,7 +5,7 @@
   <head>
 
     <meta charset="UTF-8">
-    <title>CoderBay</title>
+    <title>Sean Murphy Art Sales</title>
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -17,6 +17,7 @@
     <!-- Firebase Reference -->
 <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
 
+
   </head>
 
   <body>
@@ -27,15 +28,16 @@
 
       <!-- Jumbotron Title -->
       <div class="jumbotron">
-        <h1 class="text-center">Welcome to CodersBay</h1>
-        <h3 class="text-center">"Where bidders win big."</h3>
+        <h1 class="text-center">Welcome to Sean Murphy Auction Page</h1>
+        <h3 class="text-center">"Where Fans Can Win Sean's Artwork."</h3>
+        <img src = "banner.jpg"></img>
       </div>
 
       <div class="row">
         <div class="col-lg-12">
           <div class="panel panel-default">
             <div class="panel-body">
-              <h3 class="text-center"><strong>Today's Sale</strong>: Pure Vegetarian-Based Coding Knowledge (Chewable)</h3>
+              <h3 class="text-center">Today's Sale: Page of Issue 1</h3>
             </div>
           </div>
         </div>
@@ -48,13 +50,14 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-sm-4 col-sm-offset-2">
-                  <img class="img-responsive thumbnail center-block" src="http://graphitepublications.com/wp-content/uploads/2015/04/5-Coding-Challenges-to-Help-You-Train-Your-Brain.jpg" alt="Coding Brain" >
+                  <img class="img-responsive thumbnail center-block" src="BM1.jpg">
                 </div>
                 <div class="col-sm-6">
                   <h3 id="timer"></h3>
-                  <h3 class=""><strong>Highest Bidder:</strong> <span id="highest-bidder"></span></h3>
-                  <h3 class=""><strong>Current Price:</strong> <span id="highest-price"></span></h3>
-                  <hr>
+<!--                   <h3 class=""><strong>Highest Bidder:</strong> <span id="highest-bidder"></span></h3>
+ -->                  <h3 class=""><strong>Current Price:</strong> <span id="highest-price"></span></h3>
+<!--                       <h3 class=""> Current Email <span id = "highest-email"></span></h3>
+ -->                  <hr>
                   <h3 class="">Hurry! <strong><span id="connected-viewers"></span></strong> people have their eyes on the prize.</h3>
                 </div>
               </div>
@@ -80,6 +83,10 @@
                   <label for="bidder-price">Your Price</label>
                   <input class="form-control" id="bidder-price" type="number">
                 </div>  
+                <div class="form-group">
+                  <label for="bidder-email">Email</label>
+                  <input class="form-control" id="email-input" type="text">
+                </div>
                 <button class="btn btn-primary" id="submit-bid" type="submit">Submit</button>
               </form>
             </div>
